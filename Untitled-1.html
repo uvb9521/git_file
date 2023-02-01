@@ -41,13 +41,26 @@
                 <li class="list-group-item">Item 2</li>
                 <li class="list-group-item">Item 3</li>
                 <li class="list-group-item">Item 4</li>
+                <li class="list-item">Item 5</li>
                 <script>
-                    var items = document.getElementsByClassName("list-group-item");
-                    items[0].style.fontWeight = "bold";
-                    items[1].style.fontWeight = "bold";
-                    items[2].style.fontWeight = "bold";
-                    items[2].style.backgroundColor = "Green";
-                    items[3].style.fontWeight = "bold";
+                    // target element by getElementsByClassName
+                    // var items = document.getElementsByClassName("list-group-item");
+                    // items[0].style.fontWeight = "bold";
+                    // items[1].style.fontWeight = "bold";
+                    // items[2].style.fontWeight = "bold";
+                    // items[2].style.backgroundColor = "Green";
+                    // items[3].style.fontWeight = "bold";
+                    //
+                    // the for loop make a fontweight bold od li element
+                    // for (var i = 0; i < items.length; i++)
+                    //     items[i].style.fontWeight = "bold"
+
+                    // target the li tag by getElementsByTagName
+                    var li = document.getElementsByTagName("li");
+                    for (var i = 0; i < li.length; i++) {
+                        li[i].style.fontWeight = "bold"
+                        li[i].style.backgroundColor = "#f4f4f4"
+                    }
 
                 </script>
             </ul>
