@@ -28,8 +28,8 @@
                 var header = document.getElementById("title");
                 header.style.fontWeight = "bold";
                 header.style.color = "Green";
-                console.log(header.innerText = "goodby");
-                console.log(header.textContent = "goodby");
+                // console.log(header.innerText = "goodby");
+                // console.log(header.textContent = "goodby");
             </script>
             <form class="form-inline mb-3">
                 <input type="text" class="form-control mr-2">
@@ -41,10 +41,18 @@
                 <li class="list-group-item">Item 2</li>
                 <li class="list-group-item">Item 3</li>
                 <li class="list-group-item">Item 4</li>
+                <script>
+                    var items = document.getElementsByClassName("list-group-item");
+                    items[0].style.fontWeight = "bold";
+                    items[1].style.fontWeight = "bold";
+                    items[2].style.fontWeight = "bold";
+                    items[2].style.backgroundColor = "Green";
+                    items[3].style.fontWeight = "bold";
+
+                </script>
             </ul>
         </div>
     </div>
-
 </body>
 
 </html>
