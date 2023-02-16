@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3,
+        h4 {
+            text-align: center;
+        }
+
+        h3 {
+            color: orange;
+        }
+
+
+        div {
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input {
+            font-size: 18px;
+            color: rgb(9, 73, 52);
+            width: 99%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        button {
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .date {
+            width: 48%;
+            margin: 2px;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form onsubmit="saveToLocalStorage(event)">
+            <label>Name</label><br>
+            <input id="name" type="text" name="name" required /><br>
+
+            <label>Email</label><br>
+            <input id="email" type="email" name="email" required /><br>
+
+            <label>Password</label><br>
+            <input id="password" type="password" name="password" required /><br>
+
+            <button>Submit</button>
+        </form>
+    </div>
+    <script>
+
+
+        function saveToLocalStorage(event) {
+            event.preventDefault();
+            const name = event.target.name.value;
+            const email = event.target.email.value;
+            const password = event.target.password.value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+        }
+    </script>
+</body>
+
+</html>
